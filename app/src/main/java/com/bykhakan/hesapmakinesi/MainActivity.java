@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         int sayi2 = sc.nextInt();
 
 
-        int sonuc = topla(sayi1, sayi2);
+        int sonuc1 = topla(sayi1, sayi2);
 
-        System.out.println(sonuc);
+        System.out.println(sonuc1);
 
         int sonuc2 = bolme(sayi1, sayi2);
 
@@ -38,7 +38,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public int bolme(int s1, int s2){
-        return (s1 / s2);
+
+        try {
+            return (s1 / s2);
+        } catch (ArithmeticException e) {
+            System.out.println("Hata: " + e.toString());
+            return 0;
+        }
+
     }
 
 }
