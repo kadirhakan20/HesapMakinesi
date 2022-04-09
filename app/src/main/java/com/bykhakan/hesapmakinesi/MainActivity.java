@@ -27,12 +27,18 @@ public class MainActivity extends AppCompatActivity {
 
         System.out.println(sonuc);
 
+        int sonuc2 = bolme(sayi1, sayi2);
 
+        System.out.println(sonuc2);
 
     }
 
     public int topla(int s1, int s2){
         return (s1 + s2);
+    }
+
+    public int bolme(int s1, int s2){
+        return (s1 / s2);
     }
 
 }
